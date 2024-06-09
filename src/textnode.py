@@ -1,5 +1,6 @@
 from htmlnode import LeafNode
 
+
 text_type_text = 'text'
 text_type_bold = 'bold'
 text_type_italic = 'italic'
@@ -39,6 +40,5 @@ def text_node_to_html_node(text_node):
     if text_node.text_type == text_type_image:
         return LeafNode('img', '', {'src': text_node.url, 'alt': text_node.text})
     raise Exception(f'Invalid text type: {text_node.text_type}')
-
 
 
